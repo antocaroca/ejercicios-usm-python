@@ -5,24 +5,19 @@ def es_divisible(n, d):
     else:
         print('n no es divisible por d')
 
-es_divisible(4, 2)
-es_divisible(5, 2) 
+# es_divisible(4, 2)
+# es_divisible(5, 2) 
 
 #   Usando la función es_divisible, escriba una función es_primo(n) que determine si un número es primo o no:
 
 def es_primo(n):
-    es_divisible(n, d=n)
-    if n % 1 != 0 and n%n != 0:
-        print("es primo")
-    else:
-        print('no es na primo')
-
+    for d in range(2, n):
+        if n % d == 0:
+            return print('no es primo')
+    return print('es primo') 
     
+    
+es_primo(21)
 
-es_primo(11)
 
-# numero primo = es divisible por 1 y por sí mismo
 
-# la funcion toma 2 parametros:
-# 1) el número a comprobar si es divisible (dividendo)
-# 2) el numero por el cual se divide (divisor)
