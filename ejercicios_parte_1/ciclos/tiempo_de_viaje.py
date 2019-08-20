@@ -11,8 +11,12 @@ while True:
     if tiempo == 0:
         break
 
+minutos = int(total%60)
+if minutos < 10:
+    minutos = "0" +str(minutos)
 
-print(f"tiempo total viaje {int(total/60)}:{int(total%60)}")
+
+print(f"tiempo total viaje {int(total/60)}:{minutos}")
   
 
 

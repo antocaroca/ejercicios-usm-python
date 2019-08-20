@@ -3,14 +3,16 @@
 
 n = int(input('Ingrese un n: '))
 i = 0
-mayor= []
+mayor = 0
+
 while i < n:
     i += 1
     c = int(input('Ingrese un número: '))
-    mayor.append(c)
-    print(c)
-    # print("mayor", mayor)
-print("El mayor es:", max(mayor))
+    if c > mayor:
+        mayor = c
+    
+  
+print("El mayor es:", mayor)
 
     
   
