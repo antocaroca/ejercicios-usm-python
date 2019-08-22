@@ -4,30 +4,73 @@
 fila_alfil = int(input('Fila Alfil: '))
 columna_alfil = int(input('Columna Alfil: '))
 
+fila_torre = int(input('Fila torre: '))
+columna_torre = int(input('Columna torre: '))
 
-# i = eje x de alfil
-# y = eje y de alfil
-i = fila_alfil   
-y = i-1
-while i <= 8: # suma hasta 8
-    print(i, y)
-    i += 1
-    y += 1
+x = fila_alfil
+x2 = fila_alfil
+x3 = fila_alfil
+y = columna_alfil
+y2= columna_alfil
+y3= columna_alfil
+y4= columna_alfil
 
-i = i-1
-y = 8
 
-while i >= 1:    # resta hasta 1
-    i -= 1
-    y -= 1
-    if y == 0:
+for k in range(fila_alfil, 9):  # movimiento del alfil mientras asciende
+    if k == fila_torre and y == columna_torre:
+        print('Alfil captura')
+    # print(k, y)
+    y+=1
+    if y == 9:
         break
-    print(i, y+1)
 
-i = 1
-while i <= fila_alfil: # suma hasta fila_alfil
-    i += 1
-    y += 1
-    if i > fila_alfil:
+while x > 1:    # resta hasta 1 alfil
+
+    x -= 1
+    y2-=1
+    if y2 == 0:
         break
-    print(i, y)
+    # print(x, y2)
+    if x == fila_torre and y2 == columna_torre:
+        print('Alfil captura')
+        break
+      
+    
+while x3 > 1:    # resta hasta 1 otro eje alfil
+    if x3 == fila_torre and y3 == columna_torre:
+        print('Alfil captura')
+    x3 -= 1
+    y3 += 1
+    if x3 == 0 or y3 == 9:
+        break
+    # print(x3, y3)
+    
+for l in range(fila_alfil, 9):  # movimiento del alfil mientras asciende otro eje
+    y4-=1
+    if y4 == 0:
+        break
+    if l == fila_torre and y4 == columna_torre:
+        print('Alfil captura')
+    # print(l, y4)
+   
+
+for j in range(1, fila_torre):  # movimiento de la torre mientras desciende
+    if j == fila_alfil and columna_alfil == columna_torre:
+        print('Torre captura')
+        break
+    # print('col:', j, columna_torre*1)
+    # print()
+    # print('fila:', fila_torre*1, j)
+    # print()
+    
+
+for i in range(fila_torre, 9):  # movimiento de la torre mientras asciende
+    if i == fila_alfil and columna_alfil == columna_torre:
+        print('Torre captura')
+        break
+    # print('col', i, columna_torre*1)
+    # print()
+    # print('fila', fila_torre*1, i)
+    # print()
+  
+
