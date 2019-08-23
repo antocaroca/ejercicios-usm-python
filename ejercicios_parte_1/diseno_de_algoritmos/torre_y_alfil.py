@@ -14,31 +14,31 @@ y = columna_alfil
 y2= columna_alfil
 y3= columna_alfil
 y4= columna_alfil
-
+alfil = 0
+torre = 0
 
 for k in range(fila_alfil, 9):  # movimiento del alfil mientras asciende
     if k == fila_torre and y == columna_torre:
-        print('Alfil captura')
+        alfil += 1
     # print(k, y)
     y+=1
     if y == 9:
         break
 
 while x > 1:    # resta hasta 1 alfil
-
     x -= 1
     y2-=1
     if y2 == 0:
         break
     # print(x, y2)
     if x == fila_torre and y2 == columna_torre:
-        print('Alfil captura')
+        alfil += 1
         break
-      
     
 while x3 > 1:    # resta hasta 1 otro eje alfil
     if x3 == fila_torre and y3 == columna_torre:
-        print('Alfil captura')
+        alfil += 1
+        break
     x3 -= 1
     y3 += 1
     if x3 == 0 or y3 == 9:
@@ -50,27 +50,18 @@ for l in range(fila_alfil, 9):  # movimiento del alfil mientras asciende otro ej
     if y4 == 0:
         break
     if l == fila_torre and y4 == columna_torre:
-        print('Alfil captura')
-    # print(l, y4)
-   
-
-for j in range(1, fila_torre):  # movimiento de la torre mientras desciende
-    if j == fila_alfil and columna_alfil == columna_torre:
-        print('Torre captura')
+        alfil += 1
         break
-    # print('col:', j, columna_torre*1)
-    # print()
-    # print('fila:', fila_torre*1, j)
-    # print()
-    
+    # print(l, y4) 
 
-for i in range(fila_torre, 9):  # movimiento de la torre mientras asciende
-    if i == fila_alfil and columna_alfil == columna_torre:
-        print('Torre captura')
-        break
-    # print('col', i, columna_torre*1)
-    # print()
-    # print('fila', fila_torre*1, i)
-    # print()
-  
+# comparación posición de la torre y alfil
+if columna_torre == columna_alfil or fila_torre == fila_alfil:
+  torre += 1
 
+# contadores alfil y torre. El mayor a 0 gana
+if alfil > 0:
+    print('Alfil captura')
+elif torre > 0:
+    print('Torre captura')
+else:
+    print('ninguna captura')  
