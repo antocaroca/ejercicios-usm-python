@@ -6,6 +6,12 @@ columna_torre = int(input('Columna torre: '))
 
 
 # torre gana
-if columna_torre == columna_alfil or fila_torre == fila_alfil:
-  print('Torre captura')
+# if columna_torre == columna_alfil or fila_torre == fila_alfil:
+#   print('Torre captura')
+
+#gana alfil
+if abs(fila_alfil - fila_torre) == abs(columna_alfil - columna_torre):
+  print('torre gana')
+
+
 
