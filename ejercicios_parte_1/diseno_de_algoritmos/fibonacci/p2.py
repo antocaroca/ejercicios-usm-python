@@ -17,7 +17,7 @@ while contador < n:
 if (lista[-1]) == n:
     print(f'{n} es número de Fibonacci')
 else:
-    print(f'{n} no es número de Fibonacci')
+    print(f'{n} NO es número de Fibonacci')
 
 
 

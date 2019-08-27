@@ -2,11 +2,11 @@
 
 n = int(input('Ingrese un número: '))
 
-cont = 0
+cont = 0 # contador de divisores
 
 for i in range(1, n+1):
     for j in range(1, n+1):
-        if j% i == 0 and j % n == 0:
+        if j% i == 0 and j % n == 0: 
             # print(i)
             cont+=1
 
