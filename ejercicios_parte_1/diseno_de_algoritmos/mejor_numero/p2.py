@@ -1,0 +1,1 @@
+#   ¿Existen otros valores p que sean el n-ésimo primo, tales que n es el producto de los dígitos de p?

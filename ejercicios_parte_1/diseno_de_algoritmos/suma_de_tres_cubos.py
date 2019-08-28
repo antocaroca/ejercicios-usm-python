@@ -3,3 +3,4 @@
 
 print((7**3) - (6**3) - (3**3))
 
+# falta la tercera forma de sumar 3 cubos 

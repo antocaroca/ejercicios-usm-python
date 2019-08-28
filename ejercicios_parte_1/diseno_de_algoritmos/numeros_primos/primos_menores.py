@@ -1,6 +1,6 @@
 #   Escriba un programa que muestre los números primos menores que m, donde m es ingresado por el usuario:
 n = int(input('Primos menores que: '))
-
+cont = 0
 for num in range(1, n + 1):
    if num > 1:
        for i in range(2,num):
