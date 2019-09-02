@@ -11,14 +11,12 @@ for i in range(1, 1002, 2):
         diagonal_superior_derecha.append(i**2)
         dsd += (i**2)
            
-# print(dsd) 
 # diagonal inferior izquierda 
 cont = 0
 suma  =0
 for j in diagonal_superior_derecha:
     cont+=1
     suma += (j - (4*cont))
-# print(suma)
 # print("suma de los números de una diagonal sin el 1", dsd + suma)
 
 c = 0
@@ -28,7 +26,6 @@ siete = 7
 diferencia = siete-uno # 6
 total = 0
 while c != 499:
-    
     diferencia+=8 # 14 22
     siete += diferencia # 21
     total+=siete
@@ -37,7 +34,6 @@ while c != 499:
 
 c2 = 0
 n2 = 499
-
 uno2 = 1
 tres = 3
 diferencia2 = uno2-tres # -2
@@ -47,9 +43,5 @@ while c2 != 499:
     tres += abs(diferencia2) # 
     total2+=tres
     c2+=1
-    # print(tres)
-# print(total2+3)
-# print(total+7)
-# print("suma de los números de una diagonal sin el 1", dsd + suma)
 print("suma de las 2 diagonales:", (total2+3)+ (total+7)+(dsd + suma)+1)
    

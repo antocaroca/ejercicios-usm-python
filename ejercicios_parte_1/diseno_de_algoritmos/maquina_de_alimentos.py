@@ -1,20 +1,46 @@
-#   Una máquina de alimentos tiene productos de tres tipos, A, B y C, que valen respectivamente $270, $340 y $390.
-#  La máquina acepta y da de vuelto monedas de $10, $50 y $100.
-producto_A = 270
-producto_B = 340
-producto_C = 390
-monedas = 0
+i = 0
+k = 0
+cont = 0
+precio = 0
 
-eleccion = input('Elija producto: ')
+# contador de monedas
+cien = 0
+cincuenta = 0
+diez = 0
 
-if eleccion == 'A':
-    money = int(input('Ingrese monedas: '))
-    while monedas != producto_A:
-        monedas+=money
-        if monedas == producto_A:
+while i < 1:
+    i += 1
+    eleccion = input('Elija producto: ')
+    if eleccion == 'A':
+        precio = 270
+        print(precio)
+    elif eleccion == 'B':
+        precio = 340
+        print(precio)
+    elif eleccion == 'C':
+        precio = 390
+        print(precio)
+
+    while k < precio:
+        monedas = int(input('Ingrese monedas: '))
+        cont += monedas
+        if cont >= precio:
             break
-        elif monedas > producto_A:
-            print(f'Su vuelto: {monedas-producto_A}')
-            break
-      # AQUI QUEDÉ...
+    if cont > precio:
+        vuelto = (cont - precio)
+        while vuelto/100 >= 1:
+            cien += 1
+            vuelto -= 100
+        while vuelto/50 >= 1:
+            cincuenta += 1
+            vuelto -= 50
+        while vuelto/10 >= 1:
+            diez +=1
+            vuelto -= 10
 
+for vuelto in range(1, (cien+1)):
+    print('100')
+for vuelto in range(1, (cincuenta+1)):
+    print('50')
+for vuelto in range(1, (diez+1)):
+    print('10')
