@@ -1,7 +1,6 @@
 # VOTACIONES DE LA CONFECH
 nu = int(input('Número de universidades: '))
 i = 0
-k = 0
 
 aceptan = 0
 rechazan = 0
