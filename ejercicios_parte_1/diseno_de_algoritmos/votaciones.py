@@ -1,13 +1,15 @@
 # FALTA PROMEDIOS
 nu = int(input('Número de universidades: '))
 i = 0
-a = 0
-r = 0
-n = 0
-b = 0
+
 
 while i < nu: # esto se va a repetir 3 veces
     i+=1 # contador hasta 3
+    a = 0
+    r = 0
+    n = 0
+    b = 0
+    empate = 0
     nombre = input('Universidad: ') # ingreso nombre universidad
     while True: # se repetirá este ciclo infinitamente
 
@@ -23,7 +25,11 @@ while i < nu: # esto se va a repetir 3 veces
         elif voto == 'X':
             break # término del ciclo
     # print(f'{nombre}: {a} aceptan, {r} rechazan, {b} blancos, {n} nulos')
-    
+    while empate != a:
+        empate += 1
+        print(f'Universidades con empate: {empate}')
+
 
 print(f'Universidades que aceptan: {a}')
 print(f'Universidades que rechazan: {r}')
+
