@@ -1,35 +1,40 @@
-# FALTA PROMEDIOS
+# VOTACIONES DE LA CONFECH
 nu = int(input('Número de universidades: '))
 i = 0
+k = 0
 
+aceptan = 0
+rechazan = 0
+empate = 0
 
-while i < nu: # esto se va a repetir 3 veces
-    i+=1 # contador hasta 3
+for uni in range(1, nu + 1):
+    universidad = input('Universidad: ')
     a = 0
     r = 0
-    n = 0
     b = 0
-    empate = 0
-    nombre = input('Universidad: ') # ingreso nombre universidad
-    while True: # se repetirá este ciclo infinitamente
+    n = 0
 
-        voto = input('Voto: ') # ingreso voto
-        if voto == 'A': # si es a 
-            a+=1 # 'a' es igual a  'a' más 1
+    while i < nu:
+
+        voto = input('Voto: ')
+        if voto == 'A':
+            a+=1
         elif voto == 'R':
-            r +=1
-        elif voto == 'N':
-            n += 1
+            r+=1
         elif voto == 'B':
             b+=1
+        elif voto == 'N':
+            n+=1
         elif voto == 'X':
-            break # término del ciclo
-    # print(f'{nombre}: {a} aceptan, {r} rechazan, {b} blancos, {n} nulos')
-    while empate != a:
+            break
+    print(f'{universidad}: aceptan {a}, rechazan {r}, blancos {b}, nulos {n}')
+    if a > r:
+        aceptan += 1
+    elif r > a:
+        rechazan += 1
+    elif a  == r:
         empate += 1
-        print(f'Universidades con empate: {empate}')
 
-
-print(f'Universidades que aceptan: {a}')
-print(f'Universidades que rechazan: {r}')
-
+print(f'Universidades que aceptan: {aceptan}')
+print(f'Universidades que rechazan: {rechazan}')
+print(f'Universidades que con empate: {empate}')
