@@ -1,0 +1,35 @@
+"""
+n = 3
+contador = 0 ir agregando de a 1
+cont = 1   ir agregando de a 1
+
+cantidad de productos = 8
+
+descuento = 0.40
+
+suma = 0
+resultado = []
+
+lista con todos los productos y sus precios
+[400, 800, 500, 100, 400,300, 200, 500]
+
+repetir esto n veces
+pero si cantidad de productos/n es menor que n:
+ repetir n-1
+ si la cantidad de productos/n es mayor que n:
+ repetir esto n veces
+
+primeros 3 productos de la lista
+list[(contador*n):(n * cont)]
+            0*3=0 : 3 
+            1*3=3 : 6   segundos 3 primeros de la lista
+
+            suma = suma de esos 3 precios
+            descuento /= 2
+
+aplicar descto descuento *= suma
+restar descuento suma = suma - int(descuento)
+            resultado.append(suma)
+            
+
+"""
