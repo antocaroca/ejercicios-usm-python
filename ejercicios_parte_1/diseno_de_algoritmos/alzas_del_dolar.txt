@@ -1,0 +1,17 @@
+Registro de precios del dólar día a día
+
+cuál fue la mayor de las alzas en el precio diario a lo largo
+de ese periodo
+
+
+escriba un programa que pida al usuario ingresar: 
+
+- el número de n de días
+- el precio del dólar ṕara cada uno de los n días.
+
+El programa debe entregar como salida:
+ - cuál fue la mayor de las alzas de un día para el otro
+
+ - si en ningún día el precio subió, la salida debe decir: 
+        NO hubo alzas
+        

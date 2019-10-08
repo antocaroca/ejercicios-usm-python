@@ -1,23 +1,24 @@
 n_dias = int(input('Cuántos días? '))
 i = 0
-lista_precios = []
-lista_dias = []
+dicc_precios = {}
+dia_impar = []
+dia_par = []
 
 while i < n_dias:
     i += 1
     dia = float(input(f'Dia {i}: '))
-    lista_precios.append(dia)
-    lista_dias.append(i)
+    dicc_precios[i]=dia
 
-indice_par = []
-indice_impar = []
-# par = (list(zip(lista_dias, lista_precios)))
-for index in enumerate(lista_precios):
-    if index[0] % 2 == 0:
-        indice_par.append(index[1])
+for dia, precio in dicc_precios.items():
+    if dia % 2 != 0:
+        dia_impar.append(precio)
     else:
-        indice_impar.append(index[1])
+        dia_par.append(precio)
 
-par = (list(zip(indice_par, indice_impar)))
+pares = (list(zip(dia_impar, dia_par)))
+resultado = []
+for p in pares:
+    resultado.append(abs(p[0]- p[1]))
 
 
+print("{0:.2f}".format(max(resultado), 2))
